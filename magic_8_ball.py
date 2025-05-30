@@ -7,7 +7,7 @@ answer = ""
 # implement random number selection
 random_number = random.randint(1,5)
 
-# logic of the magic 8 ball answer
+# determine the Magic 8-Ball's answer based on the random number
 if random_number == 1:
   answer = "Of course, don't think twice!"
 elif random_number == 2:
@@ -19,17 +19,17 @@ elif random_number == 4:
 elif random_number == 5:
   answer = "No no no!"
 else:
-  answer = ""
+  answer = "Error: Unexpected random number"
 
-# no name provided - conditonal
+# no name is provided - conditonal
 if name != "":
-  print(name + " asks: ", end="")
+  print(name + " asks:", end=" ")
 else:
-  print("Question: ", end="")
+  print("Question:", end=" ")
   
-# if question is empty - conditional
+# if no question is provided - conditional
 if question != "":
   print(question)
   print("Magic 8 ball's answer: " + answer)
 else:
-  print("Magic 8 ball's answer: ")
+  print("\nMagic 8 ball cannot provide an answer without a question.")
